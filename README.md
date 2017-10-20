@@ -2,12 +2,12 @@
 
 This project is doing an analysis with R for "Human Activity Recognition Using Smartphones Data set".
 
-##About Data Set
+## About Data Set
 Whole data set comes from experiments which have been carried out with a group of 30 volunteers wearing a Samsung smartphone on the waist.Using its embedded accelerometer and gyroscope, experiments captured data of signals of 3-axial linear acceleration and 3-axial angular velocity.
 
 For more explanation,please read "README.txt" and "features_info.txt" in the package of the data set.
 
-##Project Tasks
+## Project Tasks
 1: Load the data in RStudio
 
 2: Merge data sets
@@ -22,7 +22,7 @@ Create variables called ActivityLabel and ActivityName that label all observatio
 5: Create tidy data set
 From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
 
-##Data Processing
+## Data Processing
 1.For detail of data processing procedure,please read "CodeBook.md".
 
 2.Some explanations for the data manipulation methods

@@ -68,12 +68,42 @@ Combine data from train and test
 
 -   Use rbind to combine xtrain\_data and xtest\_data into a new dataframe:xall\_data xall\_data &lt;- rbind(xtrain\_data,xtest\_data)
 
--   combine all measurements data from train and test Such as: &gt; body\_acc\_x\_all &lt;- rbind(body\_acc\_x\_train,body\_acc\_x\_test) &gt; ... &gt; body\_gyro\_x\_all &lt;- rbind(body\_gyro\_x\_train,body\_gyro\_x\_test) &gt; ... &gt; total\_acc\_x\_all &lt;- rbind(total\_acc\_x\_train,total\_acc\_x\_test) &gt; ...
+-   combine all measurements data from train and test Such as:
+
+    ``` r
+    body_acc_x_all <- rbind(body_acc_x_train,body_acc_x_test)
+    ```
+
+    ...
+
+    ``` r
+    body_gyro_x_all <- rbind(body_gyro_x_train,body_gyro_x_test)
+    ```
+
+    ...
+
+    ``` r
+    total_acc_x_all <- rbind(total_acc_x_train,total_acc_x_test)
+    ```
+
+    ...
 
 Add mean,std columns to body\_acc and body\_gyro measurement files
 ------------------------------------------------------------------
 
-Such as: &gt;body\_acc\_x\_all\[\[make.names(c("tBodyAcc-mean()-X"), unique = TRUE)\]\]&lt;-xall\_data$tBodyAcc.mean...X &gt;body\_acc\_x\_all\[\[make.names(c("tBodyAcc-std()-X"), unique = TRUE)\]\]&lt;-xall\_data$tBodyAcc.std...X &gt;... &gt;body\_gyro\_x\_all\[\[make.names(c("tBodyGyro-mean()-X"), unique = TRUE)\]\]&lt;-xall\_data$tBodyGyro.mean...X &gt;body\_gyro\_x\_all\[\[make.names(c("tBodyGyro-std()-X"), unique = TRUE)\]\]&lt;-xall\_data$tBodyGyro.std...X &gt;...
+Such as:
+
+``` r
+body_acc_x_all[[make.names(c("tBodyAcc-mean()-X"), unique = TRUE)]]<-xall_data$tBodyAcc.mean...X
+body_acc_x_all[[make.names(c("tBodyAcc-std()-X"), unique = TRUE)]]<-xall_data$tBodyAcc.std...X
+```
+
+...
+
+``` r
+body_gyro_x_all[[make.names(c("tBodyGyro-mean()-X"), unique = TRUE)]]<-xall_data$tBodyGyro.mean...X
+body_gyro_x_all[[make.names(c("tBodyGyro-std()-X"), unique = TRUE)]]<-xall_data$tBodyGyro.std...X
+```
 
 Create a new observation dataframe with a new column "activity\_name".
 ----------------------------------------------------------------------

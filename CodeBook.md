@@ -66,7 +66,7 @@ Combine data from train and test
 
 -   Use rbind to combine subject\_train and subject\_test into a new dataframe:subject\_all
 
--   Use rbind to combine xtrain\_data and xtest\_data into a new dataframe:xall\_data xall\_data &lt;- rbind(xtrain\_data,xtest\_data)
+-   Use rbind to combine xtrain\_data and xtest\_data into a new dataframe:xall\_data
 
 -   combine all measurements data from train and test,such as:
 
